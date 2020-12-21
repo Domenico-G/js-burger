@@ -15,46 +15,50 @@
     <!-- fine header applicazione -->
     <!-- inizio body applicazione -->
   <body>
-    <input type="text" name="name-burgher" value="" placeholder="Name Your Burgher">
-    <h3>ingredients</h3>
+    <input type="text" name="name-burgher" value="" placeholder="Name Your Burgher" pattern="[A-Za-z]">
+    <h3>Ingredients</h3>
     <!-- creo la lista di ingredienti -->
     <div class="ingredients-list">
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>Chees</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Cheese</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>Egg</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Egg</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>Mustard</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Mustard</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>Tomato</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Tomato</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>Lettuce</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Lettuce</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
       <div class="ingredient-box">
         <img src="" alt="">
-        <p>KIetchup</p>
-        <input class="ingredient" type="checkbox" name="" value="10">
-        <p>add</p>
+        <label for="ingredient">Ketchup</label>
+        <input type="checkbox" name="ingredient" value="10">
+        <label for="ingredient">add</label>
       </div>
+    </div>
+    <div class="cupon">
+      <label for="code-coupon">Discount Coupon</label>
+      <input type="text" id="code-coupone" placeholder="12354ABCDEF" value="" >
     </div>
     <button id="button-price" type="button" name="button">calculate</button>
     <!-- creo la lista di ingredienti -->
@@ -63,19 +67,12 @@
   <!-- inizio footer applicazione -->
   <footer>
     <h2>Your Price</h2>
-    <div class="price">
-
+    <div > $
+      <span class="price"> 50 </span>
     </div>
 
   </footer>
   <!-- fne footer applicazione -->
-
-
-
-
-
-
-
   <script src="js/app.js" charset="utf-8"></script>
 </body>
 </html>
