@@ -15,8 +15,8 @@
     <!-- fine header applicazione -->
     <!-- inizio body applicazione -->
   <body>
-    <input type="text" name="name-burgher" value="" placeholder="Name Your Burgher" pattern="[A-Za-z]">
-    <p id="obligatory-label"></p>
+    <input type="text" class="name-burgher" value="" placeholder="Name Your Burgher" pattern="[A-Za-z]">
+    <p id="obligatory-label">è obbligatorio inserire un nome</p>
     <h3>Ingredients</h3>
     <!-- creo la lista di ingredienti -->
     <div class="ingredients-list">
@@ -56,6 +56,9 @@
         <input type="checkbox" name="ingredient" value="10">
         <label for="ingredient">add</label>
       </div>
+    </div>
+    <div id="minim-ingedients">
+      seleziona due o piu ingredienti
     </div>
     <div class="cupon">
       <label for="code-coupon">Discount Coupon</label>
