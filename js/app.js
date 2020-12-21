@@ -10,43 +10,42 @@ var totalPrice = 0;
 
 var coupon = ['123FEF12sdcsa', '332dfsaaf32sa33', 'asdcca322ERFVBEBE']
 
-// creo una variabile per contenere il coupon dell'utente
-
-
-// creo una variabile di conferma del couponUser
-
-
-
-
 // creo una variabile dove inseriro il totale nell'html
 
 var priceHtml = document.getElementsByClassName('price')[0];
 
 // creo una funzione dove sommerò i check selezionati
 
- document.getElementById("button-price").addEventListener("click", function() {
-   totalPrice = 0;
+document.getElementById("button-price").addEventListener("click", function() {
+  totalPrice = 0;
 
-   for (var i = 0; i < checkIngredients.length; i++) {
-      if (checkIngredients[i].checked) {
-        totalPrice += parseInt(checkIngredients[i].value);
-      }
+  // cree una variabile per contenere il nome del panino
+
+  var burgherName = document.getElementsByName('name-burgher').value
+
+
+
+  for (var i = 0; i < checkIngredients.length; i++) {
+    if (checkIngredients[i].checked) {
+      totalPrice += parseInt(checkIngredients[i].value);
     }
-     console.log(totalPrice);
+  }
+  console.log(totalPrice);
 
-    var couponUser = document.getElementById('code-coupone').value;
+  // creo una variabile per contenere il coupon dell'utente
+  var couponUser = document.getElementById('code-coupone').value;
+  var couponeValid = false;
 
-    for (var i = 0; i <= coupon.length; i++) {
-      var couponeValid = false;
-      if (coupon[i] === couponUser) {
-        couponeValid = true;
-      }
-      console.log(couponeValid);
+  for (var i = 0; i <= coupon.length; i++) {
+    if (coupon[i] === couponUser) {
+      couponeValid = true;
     }
+  }
+  console.log(couponeValid);
 
-    if (couponeValid) {
-      priceHtml.innerText = (totalPrice + 20) / 100;
-    } else {
-      priceHtml.innerText = totalPrice;
-    }
- })
+  if (couponeValid) {
+    priceHtml.innerText = totalPrice - ((totalPrice * 20) / 100);
+  } else {
+    priceHtml.innerText = totalPrice;
+  }
+})
