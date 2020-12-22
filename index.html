@@ -8,78 +8,93 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e55df08514.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
-  <!-- inizio header applicazione -->
-  <header>
-    <h1>Create your Burgher</h1>
-    <img class="logo" alt="hamburgher">
-  </header>
-  <!-- fine header applicazione -->
-  <!-- inizio main applicazione -->
-  <main>
-    <div>
-      <input type="text" class="name-burgher" value="" placeholder="Name Your Burgher" pattern="[A-Za-z]">
-      <p id="obligatory-label">Inserisci il nome del tuo panino</p>
-    </div>
-    <!-- inizio lista di ingredienti -->
-    <div class="ingredients-list">
-      <h3>Ingredients</h3>
-      <div class="ingredient-box">
-        <img src="" alt="Cheese">
-        <label for="ingredient">Cheese</label>
-        <input type="checkbox" name="ingredient" value="3">
-        <label for="ingredient">add</label>
+  <!-- inizio wrapper -->
+  <div class="wrapper">
+    <!-- inizio header applicazione -->
+    <header>
+      <h1>Create your Burgher</h1>
+      <div class="logo">
+        <img src="img/burger-top.png" alt="hamburgher">
       </div>
-      <div class="ingredient-box">
-        <img src="" alt="">
-        <label for="ingredient">Egg</label>
-        <input type="checkbox" name="ingredient" value="4">
-        <label for="ingredient">add</label>
+    </header>
+    <!-- fine header applicazione -->
+    <!-- inizio main applicazione -->
+    <main>
+      <div class="text-name-burger">
+        <input type="text" class="name-burgher" value="" placeholder="Name Your Burgher" pattern="[A-Za-z]">
+        <p id="obligatory-label" class="hidden-text">*Inserisci il nome del tuo panino</p>
       </div>
-      <div class="ingredient-box">
-        <img src="" alt="">
-        <label for="ingredient">Mustard</label>
-        <input type="checkbox" name="ingredient" value="1.5">
-        <label for="ingredient">add</label>
+      <!-- inizio lista di ingredienti -->
+      <div class="ingredients-list">
+        <h3>Ingredients</h3>
+        <div class="ingredient-box">
+          <img src="img/cheese.svg" alt="Cheese">
+          <label class="checkbox">Cheese
+            <input type="checkbox" name="ingredient" value="3">
+            <span>add</span>
+          </label>
+        </div>
+        <div class="ingredient-box">
+          <img src="img/fried-egg.svg" alt="">
+          <label class="checkbox">Egg
+            <input type="checkbox" name="ingredient" value="4">
+            <span>add</span>
+          </label>
+        </div>
+        <div class="ingredient-box">
+          <img src="img/mustard.svg" alt="">
+          <label class="checkbox">Mustard
+            <input type="checkbox" name="ingredient" value="1">
+            <span>add</span>
+          </label>
+        </div>
+        <div class="ingredient-box">
+          <img src="img/tomato.svg" alt="">
+          <label class="checkbox">Tomato
+            <input type="checkbox" name="ingredient" value="2">
+            <span>add</span>
+          </label>
+        </div>
+        <div class="ingredient-box">
+          <img src="img/lettuce.svg" alt="">
+          <label class="checkbox">Lettuce
+            <input type="checkbox" name="ingredient" value="2">
+            <span>add</span>
+          </label>
+        </div>
+        <div class="ingredient-box">
+          <img src="img/ketchup.svg" alt="">
+          <label class="checkbox">Ketchup
+            <input type="checkbox" name="ingredient" value="1">
+            <span>add</span>
+          </label>
+        </div>
       </div>
-      <div class="ingredient-box">
-        <img src="" alt="">
-        <label for="ingredient">Tomato</label>
-        <input type="checkbox" name="ingredient" value="2">
-        <label for="ingredient">add</label>
+      <p id="minim-ingedients" class="hidden-text">*Seleziona due o piu ingredienti</p>
+      <div class="coupon">
+        <label for="code-coupon">Discount Coupon</label>
+        <input type="text" id="code-coupone" placeholder="12354ABCDEF" value="">
       </div>
-      <div class="ingredient-box">
-        <img src="" alt="">
-        <label for="ingredient">Lettuce</label>
-        <input type="checkbox" name="ingredient" value="2">
-        <label for="ingredient">add</label>
+      <div class="button">
+        <button id="button-price" type="button" name="button">calculate</button>
       </div>
-      <div class="ingredient-box">
-        <img src="" alt="">
-        <label for="ingredient">Ketchup</label>
-        <input type="checkbox" name="ingredient" value="1.5">
-        <label for="ingredient">add</label>
-      </div>
-    </div>
-    <p id="minim-ingedients">Seleziona due o piu ingredienti</p>
-    <div class="cupon">
-      <label for="code-coupon">Discount Coupon</label>
-      <input type="text" id="code-coupone" placeholder="12354ABCDEF" value="">
-    </div>
-    <button id="button-price" type="button" name="button">calculate</button>
-    <!-- fine lista di ingredienti -->
-  </main>
-  <!-- fine main applicazione -->
-  <!-- inizio footer applicazione -->
-  <footer>
-    <h2>Your Price</h2>
-    <p>$ <span class="price"> 50 </p>
-    </div>
+      <!-- fine lista di ingredienti -->
+    </main>
+    <!-- fine main applicazione -->
+    <!-- inizio footer applicazione -->
+    <footer>
+      <h2>Your Price</h2>
+      <p>$ <span class="price"> 50 </p>
+  </div>
   </footer>
   <!-- fne footer applicazione -->
+  </div>
+  <!-- fine wrapper -->
   <script src="js/app.js" charset="utf-8"></script>
 </body>
 

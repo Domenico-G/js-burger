@@ -29,23 +29,26 @@ document.getElementById("button-price").addEventListener("click", function() {
   if (burgherName.length === 0) {
     burgherLabel.style.display = "block";
   } else if (minIngredients < 2) {
-    burgherLabel.style.display = "none";
     minIngLabel.style.display = "block";
+    burgherLabel.style.display = "none";
   } else {
     minIngLabel.style.display = "none";
     // creo una variabile per contenere il coupon dell'utente
     var couponUser = document.getElementById('code-coupone').value;
     var couponeValid = false;
-    for (var i = 0; i <= coupon.length; i++) {
-      if (coupon[i] === couponUser) {
-        couponeValid = true;
-      }
+
+    if (coupon.indexOf(couponUser) !== -1) {
+      couponeValid = true;
     }
+
     if (couponeValid) {
       priceHtml.innerText = totalPrice - ((totalPrice * 20) / 100);
     } else {
       priceHtml.innerText = totalPrice;
     }
   }
+
+
+
 
 })
