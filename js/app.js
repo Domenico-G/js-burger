@@ -60,3 +60,4 @@ document.getElementById("button-price").addEventListener("click", function() {
     }
   }
 })
+
